@@ -1,0 +1,7 @@
+torch
+transformers
+numpy
+scikit-learn
+opencv-python
+Pillow
+joblib
