@@ -23,9 +23,9 @@ Code/
 
 ---
 
-    ## **Setup Environment** ⚙️💻🔧
+## **Setup Environment** ⚙️💻🔧
 
-    ```bash
+```bash
    # Create a virtual environment using Python 3.11
     python3.11 -m venv thermal_env
 
@@ -44,8 +44,7 @@ Code/
 
     # Install all required dependencies
     pip install -r requirements.txt
-
-    ```
+```
 
 **requirements.txt** should include: 📜🧩💡
 
