@@ -26,24 +26,24 @@ Code/
 ## **Setup Environment** ⚙️💻🔧
 
 ```bash
-   # Create a virtual environment using Python 3.11
-    python3.11 -m venv thermal_env
+# Create a virtual environment using Python 3.11
+python3.11 -m venv thermal_env
 
-    # Activate the environment
-    # 🪟 On Windows (PowerShell)
-    .\thermal_env\Scripts\Activate.ps1
+# Activate the environment
+# 🪟 On Windows (PowerShell)
+.\thermal_env\Scripts\Activate.ps1
 
-    # 🧠 OR on Command Prompt (cmd)
-    thermal_env\Scripts\activate.bat
+# 🧠 OR on Command Prompt (cmd)
+thermal_env\Scripts\activate.bat
 
-    # 🐧 On Linux / macOS
-    source thermal_env/bin/activate
+# 🐧 On Linux / macOS
+source thermal_env/bin/activate
 
-    # Upgrade pip (recommended)
-    python -m pip install --upgrade pip
+# Upgrade pip (recommended)
+python -m pip install --upgrade pip
 
-    # Install all required dependencies
-    pip install -r requirements.txt
+# Install all required dependencies
+pip install -r requirements.txt
 ```
 
 **requirements.txt** should include: 📜🧩💡
