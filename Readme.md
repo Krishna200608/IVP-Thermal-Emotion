@@ -1,7 +1,7 @@
 # **Thermal Emotion Recognition Project** 🔥📸🧠
 
 This project uses **Vision Transformer (ViT) embeddings + SVM** to detect emotions from thermal facial images.
-It includes **preprocessing**, **feature extraction**, **classifier training**, and **batch inference**. 🌡️🤖😊
+It includes **preprocessing**, **feature extraction**, **classifier training**, **batch inference**, and a **Gradio web app** for interactive predictions. 🌡️🤖😊
 
 ---
 
@@ -18,6 +18,7 @@ Code/
 │   └── preprocess_image.py
 ├── data/               # Input thermal images
 ├── outputs/            # Processed images, features, models, predictions
+├── app.py              # Gradio web app for predictions
 ├── README.md
 └── requirements.txt
 ```
@@ -53,6 +54,7 @@ scikit-learn
 opencv-python
 Pillow
 joblib
+gradio
 ```
 
 ---
@@ -111,12 +113,33 @@ python -m scripts.batch_infer `
     --out_csv outputs\predictions.csv
 ```
 
-**Output:**
-A file named `predictions.csv` containing **predicted emotion labels and probabilities**. 📊✅
+**Output:** `predictions.csv` containing predicted emotion labels and probabilities. 📊✅
 
 ---
 
-## **6. Performance Notes** ⏱️⚡📈
+### **6. Run Gradio Web App** 🌐
+
+```powershell
+python app.py
+```
+
+* Opens a **local web interface** at `http://127.0.0.1:7860`.
+* To generate a **public link**:
+
+  1. Ensure you have internet access.
+  2. In `app.py`, set:
+
+```python
+iface.launch(share=True)
+```
+
+* **Note:** If your local network restricts connections, the public link may fail. In that case, use **Google Colab** for a public Gradio link or configure **ngrok with an authtoken**.
+
+* Upload a thermal image to get **predicted emotion** instantly.
+
+---
+
+## **7. Performance Notes** ⏱️⚡📈
 
 Measure average inference time per image:
 
@@ -136,11 +159,13 @@ python -c "import platform; print(platform.platform())"
 
 ---
 
-## **7. Optional Improvements** 🧪📈🔍
+## **8. Optional Improvements** 🧪📈🔍
 
 * Compare **SVM on ViT embeddings** vs **fine-tuned ViT head** for performance improvement.
 * Add **data augmentation** to improve model robustness.
 * Experiment with **different kernels (RBF, polynomial)** in SVM.
+* Integrate **real-time webcam input** in the Gradio app.
+* Use **Google Colab** if public links fail on local networks.
 
 ---
 
