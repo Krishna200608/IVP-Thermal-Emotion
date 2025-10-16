@@ -58,9 +58,5 @@ iface = gr.Interface(
 )
 
 if __name__ == "__main__":
-    # Open a public tunnel
-    public_url = ngrok.connect("7860")
-    print("Public URL:", public_url)
-    
     # Launch Gradio app
     iface.launch(share=True)  # 'share=True' creates a public link if needed
